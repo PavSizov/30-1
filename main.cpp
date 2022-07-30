@@ -6,6 +6,7 @@ int main()
     std:: string ans;
     std:: cout << "Enter the command: get, post, put, delete, patch"<< std::endl;
     std::cin >> ans;
+
     while ( ans != "get" && ans != "post" && ans != "put" && ans != "delete" && ans != "patch")
     {
         std:: cout << "Error command. Enter the command: get, post, put, delete, patch"<< std::endl;
@@ -19,6 +20,7 @@ int main()
         if (ans == "post") {
             cpr::Response r = cpr::Post(cpr::Url("http://httpbin.org/post"));
             std::cout << r.text << std::endl;
+
         }
         if (ans == "put") {
             cpr::Response r = cpr::Put(cpr::Url("http://httpbin.org/put"));
