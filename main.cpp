@@ -17,19 +17,19 @@ int main()
             std::cout << r.text << std::endl;
         }
         if (ans == "post") {
-            cpr::Response r = cpr::Get(cpr::Url("http://httpbin.org/post"));
+            cpr::Response r = cpr::Post(cpr::Url("http://httpbin.org/post"));
             std::cout << r.text << std::endl;
         }
         if (ans == "put") {
-            cpr::Response r = cpr::Get(cpr::Url("http://httpbin.org/put"));
+            cpr::Response r = cpr::Put(cpr::Url("http://httpbin.org/put"));
             std::cout << r.text << std::endl;
         }
         if (ans == "delete") {
-            cpr::Response r = cpr::Get(cpr::Url("http://httpbin.org/delete"));
+            cpr::Response r = cpr::Delete(cpr::Url("http://httpbin.org/delete"));
             std::cout << r.text << std::endl;
         }
         if (ans == "patch") {
-            cpr::Response r = cpr::Get(cpr::Url("http://httpbin.org/patch"));
+            cpr::Response r = cpr::Patch(cpr::Url("http://httpbin.org/patch"));
             std::cout << r.text << std::endl;
         }
         std::cout << "Enter the command: get, post, put, delete, patch or exit" << std::endl;
